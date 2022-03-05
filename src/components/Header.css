@@ -1,0 +1,19 @@
+header {
+  align-items: center;
+  background-color: aqua;
+  display: flex;
+  height: 80px;
+  justify-content: space-around;
+}
+
+.logo {
+  color: rgb(72, 173, 72);
+  font-size: 34px;
+  font-weight: bold;
+}
+
+header strong {
+  font-size: 18px;
+  margin-left: 25px;
+  margin-right: 10px;
+}
