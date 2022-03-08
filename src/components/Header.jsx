@@ -5,7 +5,7 @@ import PropType from 'prop-types';
 
 class Header extends React.Component {
   render() {
-    const { email, total } = this.props;
+    const { email } = this.props;
     return (
       <header>
         <div className="logo">TRYBE</div>
