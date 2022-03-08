@@ -7,13 +7,13 @@ const initialStation = {
 };
 
 const wallet = (state = initialStation, action) => {
-  let { total } = state;
+  let total = 0;
   const despesas = [...state.expenses, action.payload];
   switch (action.type) {
   case 'SUBMIT_WALLET':
 
     despesas.forEach((despesa) => {
-      total += Number(despesa.cotacao) * Number(despesa.value); // multiplicar pelo valor
+      total += Number(despesa.exchangeRates[despesa.currency].ask) * Number(despesa.value); // multiplicar pelo valor
     });
     return {
 

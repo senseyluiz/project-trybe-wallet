@@ -19,6 +19,20 @@ class Table extends React.Component {
             <th> Editar/Excluir </th>
           </tr>
         </thead>
+
+        <tbody>
+          <tr>
+            <td> Teste </td>
+            <td> Teste </td>
+            <td> Teste </td>
+            <td> Teste </td>
+            <td> Teste </td>
+            <td> Teste </td>
+            <td> Teste </td>
+            <td> Teste </td>
+            <td> Teste </td>
+          </tr>
+        </tbody>
       </table>
     );
   }

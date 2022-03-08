@@ -20,7 +20,7 @@ export function addDespesa(despesa) {
   return async (dispatch) => {
     const response = await (await fetch(url)).json();
 
-    despesa.cotacao = response[despesa.currency].ask;
+    despesa.exchangeRates = response;
     dispatch(walletAction(despesa));
   };
 }

@@ -6,7 +6,6 @@ import PropType from 'prop-types';
 class Header extends React.Component {
   render() {
     const { email, total } = this.props;
-    console.log('email: ', email, 'total: ', total);
     return (
       <header>
         <div className="logo">TRYBE</div>
