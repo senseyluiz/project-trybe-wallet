@@ -13,14 +13,14 @@ form label {
   margin: 10px;
 }
 
-form input, form select {
+form input , form select {
   border-radius: 5px;
   font-size: 14px;
   margin-left: 10px;
   padding-left: 10px;
 }
 
-#valor {
+.valor {
   width: 80px;
 }
 

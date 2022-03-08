@@ -39,6 +39,7 @@ class Formulario extends React.Component {
           Valor:
           <input
             id="valor"
+            className="valor"
             name="value"
             data-testid="value-input"
             type="number"
