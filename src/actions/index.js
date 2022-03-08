@@ -1,8 +1,26 @@
 // Coloque aqui suas actions
 
-const userAction = (email) => ({
-  type: 'USER_ACTION',
-  payload: email,
-});
+export default function userAction(email) {
+  return {
+    type: 'USER_ACTION',
+    payload: email,
+  };
+}
 
-export default userAction;
+export function walletAction(obj) {
+  return {
+
+    type: 'SUBMIT_WALLET',
+    payload: obj,
+  };
+}
+
+export function addDespesa(despesa) {
+  const url = 'https://economia.awesomeapi.com.br/json/all';
+  return async (dispatch) => {
+    const response = await (await fetch(url)).json();
+
+    despesa.cotacao = response[despesa.currency].ask;
+    dispatch(walletAction(despesa));
+  };
+}

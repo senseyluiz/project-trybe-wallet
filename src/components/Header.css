@@ -1,15 +1,20 @@
 header {
   align-items: center;
-  background-color: aqua;
+  
   display: flex;
   height: 80px;
   justify-content: space-around;
 }
 
 .logo {
-  color: rgb(72, 173, 72);
+  background-color: rgb(54, 94, 2);
+  color: rgb(242, 248, 242);
   font-size: 34px;
   font-weight: 900;
+  height: 70px;
+  width: 150px;
+  line-height: 70px;
+  text-align: center;
 }
 
 header strong {

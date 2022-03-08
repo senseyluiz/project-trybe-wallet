@@ -3,13 +3,24 @@
 const initialStation = {
   currencies: [],
   expenses: [],
+  total: 0,
 };
 
 const wallet = (state = initialStation, action) => {
+  let { total } = state;
+  const despesas = [...state.expenses, action.payload];
   switch (action.type) {
   case 'SUBMIT_WALLET':
 
-    break;
+    despesas.forEach((despesa) => {
+      total += Number(despesa.cotacao) * Number(despesa.value); // multiplicar pelo valor
+    });
+    return {
+
+      ...state,
+      expenses: despesas,
+      total,
+    };
 
   default:
     return state;
