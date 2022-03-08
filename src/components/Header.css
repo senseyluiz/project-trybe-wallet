@@ -1,6 +1,5 @@
 header {
-  align-items: center;
-  
+  align-items: center;  
   display: flex;
   height: 80px;
   justify-content: space-around;
@@ -12,8 +11,8 @@ header {
   font-size: 34px;
   font-weight: 900;
   height: 70px;
-  width: 150px;
   line-height: 70px;
+  width: 150px;
   text-align: center;
 }
 
