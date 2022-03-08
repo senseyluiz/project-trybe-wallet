@@ -12,6 +12,15 @@ class Formulario extends React.Component {
     currency: 'USD',
     method: '',
     tag: '',
+    moedas: [],
+  }
+
+  async componentDidMount() {
+    const url = 'https://economia.awesomeapi.com.br/json/all';
+    const response = await (await fetch(url)).json();
+    this.setState({
+      moedas: Object.keys(response),
+    });
   }
 
   handleChange = (event) => {
@@ -30,9 +39,13 @@ class Formulario extends React.Component {
     this.setState({
       id: id + 1,
     });
+    document.querySelector('.valor').value = '';
+    document.querySelector('.descricao').value = '';
   }
 
   render() {
+    const { moedas } = this.state;
+
     return (
       <form>
         <label htmlFor="valor">
@@ -51,6 +64,7 @@ class Formulario extends React.Component {
           Descricao:
           <input
             id="descricao"
+            className="descricao"
             name="description"
             data-testid="description-input"
             type="text"
@@ -68,21 +82,11 @@ class Formulario extends React.Component {
 
           >
 
-            <option value="USD">USD</option>
-            <option value="CAD">CAD</option>
-            <option value="GBP">GBP</option>
-            <option value="ARS">ARS</option>
-            <option value="BTC">BTC</option>
-            <option value="LTC">LTC</option>
-            <option value="EUR">EUR</option>
-            <option value="JPY">JPY</option>
-            <option value="CHF">CHF</option>
-            <option value="AUD">AUD</option>
-            <option value="CNY">CNY</option>
-            <option value="ILS">ILS</option>
-            <option value="ETH">ETH</option>
-            <option value="ETH">ETH</option>
-            <option value="DOGE">DOGE</option>
+            {
+              moedas.map((moeda, index) => (
+                moeda !== 'USDT' && <option key={ index } value={ moeda }>{moeda}</option>
+              ))
+            }
           </select>
         </label>
 
