@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 class Table extends React.Component {
+  delete = (event) => {
+
+  }
+
   render() {
     const { despesas } = this.props;
     console.log(despesas);
@@ -50,7 +54,7 @@ class Table extends React.Component {
                   </td>
 
                   <td>
-                    {value}
+                    {Number(value).toFixed(2)}
                   </td>
 
                   <td>
@@ -71,7 +75,7 @@ class Table extends React.Component {
 
                   <td data-testid="edit-btn">
                     <button type="button" className="yellow">Editar</button>
-                    <button type="button" className="red">Excluir</button>
+                    <button type="button" className="red" onClick={ this.delete }>Excluir</button>
                   </td>
 
                 </tr>);
