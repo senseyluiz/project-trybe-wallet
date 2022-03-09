@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 class Table extends React.Component {
+  delete = (despesas) => {
+    console.log(despesas);
+  }
+
   render() {
     const { despesas } = this.props;
     console.log(despesas);
@@ -75,7 +79,7 @@ class Table extends React.Component {
                     <button
                       type="button"
                       className="red"
-                      onClick={ this.delete }
+                      onClick={ () => this.delete(despesas) }
                       data-testid="delete-btn"
                     >
                       Excluir

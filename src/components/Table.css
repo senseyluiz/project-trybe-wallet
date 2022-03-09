@@ -1,6 +1,6 @@
 table {
   background-color: #3a5a40;
-  color: #dad7cd;  
+  color: #dad7cd;
   width: 100%;
 }
 
@@ -15,17 +15,13 @@ tbody {
   text-align: center;
 }
 
-tbody tr td{
+tbody tr td {
   border-radius: 2px;
   padding: 8px 0;
 }
 
 button {
   margin-left: 5px;
-}
-
-table .red:hover {
-  background-color: #690202;  
 }
 
 table .red {
@@ -47,5 +43,5 @@ table .yellow {
 }
 
 table .yellow:hover {
-  background-color: #c9cc00;  
+  background-color: #c9cc00;
 }
