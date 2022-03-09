@@ -10,8 +10,8 @@ class Formulario extends React.Component {
     value: '',
     description: '',
     currency: 'USD',
-    method: '',
-    tag: '',
+    method: 'Dinheiro',
+    tag: 'Alimentação',
     moedas: [],
   }
 

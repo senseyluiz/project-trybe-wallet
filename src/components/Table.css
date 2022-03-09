@@ -1,6 +1,51 @@
 table {
   background-color: #3a5a40;
-  color: #dad7cd;
-  height: 80px;
+  color: #dad7cd;  
   width: 100%;
+}
+
+table thead th {
+  padding: 15px 0;  
+}
+
+tbody {  
+  background-color: #cfe1b9;
+  color: #3a5a40;
+  margin: 0;
+  text-align: center;
+}
+
+tbody tr td{
+  border-radius: 2px;
+  padding: 8px 0;
+}
+
+button {
+  margin-left: 5px;
+}
+
+table .red:hover {
+  background-color: #690202;  
+}
+
+table .red {
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+  font-weight: 900;
+}
+
+table .red:hover {
+  background-color: #690202;  
+}
+
+table .yellow {
+  background-color: yellow;
+  border-radius: 4px;
+  color: black;
+  font-weight: 900;
+}
+
+table .yellow:hover {
+  background-color: #c9cc00;  
 }
