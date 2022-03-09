@@ -69,9 +69,17 @@ class Table extends React.Component {
                     Real
                   </td>
 
-                  <td data-testid="edit-btn">
+                  <td>
                     <button type="button" className="yellow">Editar</button>
-                    <button type="button" className="red" onClick={ this.delete }>Excluir</button>
+
+                    <button
+                      type="button"
+                      className="red"
+                      onClick={ this.delete }
+                      data-testid="delete-btn"
+                    >
+                      Excluir
+                    </button>
                   </td>
 
                 </tr>);
