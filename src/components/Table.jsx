@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 class Table extends React.Component {
-  delete = (event) => {
-
-  }
-
   render() {
     const { despesas } = this.props;
     console.log(despesas);
@@ -62,7 +58,7 @@ class Table extends React.Component {
                   </td>
 
                   <td>
-                    {cambio}
+                    {Number(cambio).toFixed(2)}
                   </td>
 
                   <td>
@@ -93,7 +89,7 @@ const mapStateToProps = (state) => ({
 });
 
 Table.propTypes = {
-  despesas: PropTypes.array.isRequired,
+  despesas: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default connect(mapStateToProps, null)(Table);
