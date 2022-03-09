@@ -5,7 +5,7 @@ table {
 }
 
 table thead th {
-  padding: 15px 0;  
+  padding: 15px 0;
 }
 
 tbody {  
@@ -32,7 +32,7 @@ table .red {
 }
 
 table .red:hover {
-  background-color: #690202;  
+  background-color: #690202;
 }
 
 table .yellow {
