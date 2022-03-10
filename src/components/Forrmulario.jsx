@@ -38,13 +38,15 @@ class Formulario extends React.Component {
 
     this.setState({
       id: id + 1,
+      value: '',
+      description: '',
     });
-    document.querySelector('.valor').value = '';
-    document.querySelector('.descricao').value = '';
+    // document.querySelector('.valor').value = '';
+    // document.querySelector('.descricao').value = '';
   }
 
   render() {
-    const { moedas } = this.state;
+    const { moedas, value, description } = this.state;
 
     return (
       <form>
@@ -52,6 +54,7 @@ class Formulario extends React.Component {
           Valor:
           <input
             id="valor"
+            value={ value }
             className="valor"
             name="value"
             data-testid="value-input"
@@ -64,6 +67,7 @@ class Formulario extends React.Component {
           Descricao:
           <input
             id="descricao"
+            value={ description }
             className="descricao"
             name="description"
             data-testid="description-input"
