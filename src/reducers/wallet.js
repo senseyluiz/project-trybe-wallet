@@ -3,7 +3,7 @@
 const initialStation = {
   currencies: [],
   expenses: [],
-  total: 0,
+
 };
 
 const wallet = (state = initialStation, action) => {
@@ -35,12 +35,11 @@ const wallet = (state = initialStation, action) => {
     // console.log(objeto.exchangeRates);
     const cambio = Number(objeto.exchangeRates[objeto.currency].ask);
     const reduzir = valor * cambio;
-    const teste = total - reduzir;
-    console.log(teste);
+    console.log(total);
     return {
       ...state,
       expenses: state.expenses.filter((despesa) => despesa.id !== action.id),
-      total: teste,
+      total: total - reduzir,
     }; }
 
   default:
