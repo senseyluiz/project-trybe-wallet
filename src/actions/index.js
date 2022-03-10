@@ -24,3 +24,10 @@ export function addDespesa(despesa) {
     dispatch(walletAction(despesa));
   };
 }
+
+export function deletaDespesa(id) {
+  return {
+    type: 'DELETAR_DESPESA',
+    id,
+  };
+}
