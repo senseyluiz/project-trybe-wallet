@@ -1,6 +1,6 @@
 .Login {
   align-items: center;
-  background-color: rgb(170, 207, 192);
+  background-color: rgb(131, 173, 120);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -13,6 +13,20 @@
   display: flex;
   flex-direction: column;
   width: 600px;
+}
+
+.logo-login {  
+  text-align: center;
+  background-color: rgb(54, 94, 2);
+  color: rgb(242, 248, 242);
+  font-size: 34px;
+  font-weight: 900;  
+  line-height: 40px;
+  text-align: center;
+  width: 235px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 20px;
 }
 
 .Login input {
@@ -37,7 +51,7 @@
 }
 
 .Login button:disabled {
-  background-color: rgb(65, 226, 226);
+  background-color: rgb(82, 236, 133);
 }
 
 .Login button:hover {

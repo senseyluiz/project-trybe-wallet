@@ -46,6 +46,14 @@ class Login extends React.Component {
     return (
       <main className="Login">
 
+        <div className=" logo-login">
+          TRYBE
+          {' '}
+          <br />
+          {' '}
+          WALLET
+        </div>
+
         <label htmlFor="email">
           <input
             data-testid="email-input"
